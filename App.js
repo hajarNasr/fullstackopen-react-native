@@ -1,25 +1,9 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View
-} from "react-native";
+import './components/Main';
+import Main from "./components/Main";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>
-        HIIIIIIII
-      </Text>
-    </View>
+    <Main/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
