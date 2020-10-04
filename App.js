@@ -1,9 +1,13 @@
 import React from "react";
-import './components/Main';
-import Main from "./components/Main";
+import { View } from 'react-native';
+import Main from "./src/components/Main";
+import AppBar from './src/components/AppBar';
 
 export default function App() {
   return (
-    <Main/>
+    <View>
+      <AppBar/>
+      <Main/>
+    </View>
   );
 }
