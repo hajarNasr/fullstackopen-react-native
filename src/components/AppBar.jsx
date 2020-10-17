@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,  Text,
+import { View,  Text, ScrollView,
          StyleSheet } 
        from 'react-native';
 import { Link } from "react-router-native";
@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.AppBarBackground,
     display:"flex",
     flexDirection:"row",
-    justifyContent:"space-between"
+    justifyContent:"space-between",
+    flexGrow : 1
   },
 
   signInText: {
@@ -27,21 +28,25 @@ const styles = StyleSheet.create({
      alignSelf: 'flex-end',
      backgroundColor:"whitesmoke",
      padding:5,
-    }
+    },
+
+    scroll: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'center'
+    },
 
 });
 
 const AppBar = () => {
   return (
-    <View>
-      <View style={styles.container}>
+      <ScrollView horizontal contentContainerStyle={styles.container}>
         <AppBarTab name="Repositories"/> 
         <Link to="/sign-in">
           <Text style={styles.signInText}>Sign in</Text>
-        </Link> 
-      </View>
-    </View>
-  )
+        </Link>   
+      </ScrollView>
+  );
 };
 
 export default AppBar;
