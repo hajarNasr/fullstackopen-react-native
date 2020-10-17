@@ -6,9 +6,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     padding: 10,
-  /*   borderStyle:"solid",
-    borderWidth:1,
-    borderColor:"red", */
     backgroundColor:"whitesmoke"
   },
   itemRanks: {
